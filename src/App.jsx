@@ -1,8 +1,7 @@
-import { sayHello } from "../utils.js";
-
-function App() {
-  sayHello();
-  return <h1>Hello world!</h1>;
+export default function App() {
+  return (
+    <div>
+      <h1>Hello world from react!</h1>
+    </div>
+  );
 }
-
-export default App;
