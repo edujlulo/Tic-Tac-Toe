@@ -9,6 +9,7 @@ function App() {
   const body = document.getElementById("body");
 
   function changeBackgroundColor() {
+    console.log("holaaaaa mundoooooo");
     if (body.style.backgroundColor === "green") {
       body.style.backgroundColor = "blue";
     } else if (body.style.backgroundColor === "blue") {
