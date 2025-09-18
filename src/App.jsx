@@ -7,6 +7,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   const body = document.getElementById("body");
+  const title = document.getElementById("title");
 
   function changeBackgroundColor() {
     console.log("holaaaaa mundoooooo");
@@ -17,6 +18,8 @@ function App() {
     } else {
       body.style.backgroundColor = "green";
     }
+    // Hello world button
+    title.textContent = "Hello world!!";
   }
 
   return (
@@ -30,7 +33,7 @@ function App() {
             <img src={reactLogo} className="logo react" alt="React logo" />
           </a>
         </div>
-        <h1>Vite + React</h1>
+        <h1 id="title">Vite + React</h1>
         <div className="card">
           <button onClick={() => changeBackgroundColor()}>
             count is {count}
