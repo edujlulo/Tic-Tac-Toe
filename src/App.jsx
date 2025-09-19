@@ -10,7 +10,6 @@ function App() {
   const title = document.getElementById("title");
 
   function changeBackgroundColor() {
-    console.log("holaaaaa mundoooooo");
     if (body.style.backgroundColor === "green") {
       body.style.backgroundColor = "blue";
     } else if (body.style.backgroundColor === "blue") {
@@ -18,8 +17,7 @@ function App() {
     } else {
       body.style.backgroundColor = "green";
     }
-    // Hello world button
-    title.textContent = "Hello world!!";
+    title.textContent = "Hello world";
   }
 
   return (
