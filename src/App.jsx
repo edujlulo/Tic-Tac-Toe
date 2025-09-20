@@ -4,46 +4,54 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [value, setValue] = useState("");
 
-  const body = document.getElementById("body");
-  const title = document.getElementById("title");
+  let player = "X";
 
-  function changeBackgroundColor() {
-    if (body.style.backgroundColor === "green") {
-      body.style.backgroundColor = "blue";
-    } else if (body.style.backgroundColor === "blue") {
-      body.style.backgroundColor = "red";
+  function changePlayer() {
+    if (player === "X") {
+      player = "O";
     } else {
-      body.style.backgroundColor = "green";
+      player = "X";
     }
-    title.textContent = "Hello world";
+  }
+
+  function displayMove() {
+    setValue(player);
   }
 
   return (
     <>
-      <div id="body">
-        <div>
-          <a href="https://vite.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
+      <div id="board">
+        <div className="box" onClick={displayMove}>
+          {value}
         </div>
-        <h1 id="title">Vite + React</h1>
-        <div className="card">
-          <button onClick={() => changeBackgroundColor()}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
+        <div className="box" onClick={displayMove}>
+          {value}
         </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
+        <div className="box" onClick={displayMove}>
+          {value}
+        </div>
+        <div className="box" onClick={displayMove}>
+          {value}
+        </div>
+        <div className="box" onClick={displayMove}>
+          {value}
+        </div>
+        <div className="box" onClick={displayMove}>
+          {value}
+        </div>
+        <div className="box" onClick={displayMove}>
+          {value}
+        </div>
+        <div className="box" onClick={displayMove}>
+          {value}
+        </div>
+        <div className="box" onClick={displayMove}>
+          {value}
+        </div>
       </div>
+      <p id="turnMessage">It's {player}'s turn</p>
     </>
   );
 }
