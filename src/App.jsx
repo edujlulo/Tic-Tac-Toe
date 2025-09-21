@@ -18,6 +18,7 @@ function App() {
 
   function displayMove() {
     setValue(player);
+    changePlayer();
   }
 
   return (
