@@ -14,6 +14,7 @@ function App() {
     } else {
       player = "X";
     }
+    console.log("hey");
   }
 
   function displayMove() {
