@@ -44,8 +44,16 @@ function App() {
     setPlayer(player === "X" ? "O" : "X");
   }
 
+  function resetGame() {
+    setBoard(Array(9).fill(null));
+    setPlayer("X");
+    setWinner(null);
+  }
+
   return (
     <>
+      <h1 id="title">Tic Tac Toe</h1>
+      <p id="madeByMessage">Made by: Eduardo Lulo</p>
       <div id="board">
         {board.map((value, index) => (
           <div key={index} className="box" onClick={() => handleClick(index)}>
@@ -56,6 +64,9 @@ function App() {
       <p id="turnMessage">
         {winner ? `${winner} wins! 🎉` : `It's ${player}'s turn`}
       </p>
+      <button id="resetButton" onClick={() => resetGame()}>
+        Reset game
+      </button>
     </>
   );
 }
