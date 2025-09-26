@@ -42,8 +42,8 @@
 }
 
 .box {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background-color: rgb(0, 132, 255);
   padding: 55px 55px;
   font-size: 80px;
@@ -65,9 +65,9 @@
 
 #title {
   text-decoration: underline;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 70px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  font-size: 60px;
 }
 
 #madeByMessage {
@@ -77,8 +77,8 @@
 
 #turnMessage {
   padding: 0 0;
-  margin: 50px 0;
-  font-size: 70px;
+  margin: 20px 0;
+  font-size: 60px;
   font-weight: bold;
   color: rgb(146, 61, 27);
 }
